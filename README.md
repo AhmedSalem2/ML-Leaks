@@ -1,1 +1,1 @@
-### Code will be avaiable soon!.
+### Code will be available soon!.
