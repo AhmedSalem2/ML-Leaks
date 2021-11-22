@@ -256,7 +256,7 @@ def generateAttackData(dataset, classifierType, dataFolderPath ,pathToLoadData ,
 def attackerOne(dataset= 'CIFAR10',classifierType = 'cnn',dataFolderPath='./data/',pathToLoadData = './data/cifar-10-batches-py-official',num_epoch = 50,preprocessData=True,trainTargetModel = True,trainShadowModel=True):
 	targetX, targetY, shadowX, shadowY = generateAttackData(dataset,classifierType,dataFolderPath,pathToLoadData,num_epoch,preprocessData,trainTargetModel,trainShadowModel)
 	print("Training the attack model for the first adversary")
-	trainAttackModel(targetX, targetY, shadowX, shadowY)  
+	trainAttackModel(shadowX, shadowY, targetX, targetY)
 	
 	
 def attackerTwo(dataset1= 'CIFAR10',dataset2= 'News',classifierType1 = 'cnn',classifierType2 = 'nn',dataFolderPath='./data/',pathToLoadData = './data/cifar-10-batches-py-official',num_epoch = 50,preprocessData=True,trainTargetModel = True,trainShadowModel=True):
